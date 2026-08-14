@@ -1149,3 +1149,29 @@ select {
         grid-template-columns: 1fr 1fr;
     }
 }
+.quote-contact {
+    margin-top: 30px;
+    display: grid;
+    gap: 10px;
+}
+
+.quote-contact p {
+    margin: 0;
+}
+
+.quote-contact a {
+    color: inherit;
+    font-weight: 600;
+}
+
+.quote-contact a:hover {
+    color: var(--primary-dark);
+}
+
+.contact-card a {
+    transition: 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: var(--primary-dark);
+}
