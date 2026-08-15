@@ -279,3 +279,65 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+/* =========================================================
+   ANDYSTRUCT MOBILE MENU FIX
+========================================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navigation = document.getElementById("navigation");
+
+if (menuToggle && navigation) {
+
+    // Open / close mobile menu
+    menuToggle.addEventListener("click", function () {
+        navigation.classList.toggle("active");
+
+        const isOpen = navigation.classList.contains("active");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
+        );
+    });
+
+
+    // Close menu when a navigation link is clicked
+    navigation.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navigation.classList.remove("active");
+
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation"
+            );
+
+        });
+
+    });
+
+
+    // Close menu when user taps outside the navigation
+    document.addEventListener("click", function (event) {
+
+        if (
+            navigation.classList.contains("active") &&
+            !navigation.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+
+            navigation.classList.remove("active");
+
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation"
+            );
+        }
+
+    });
+
+}
