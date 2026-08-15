@@ -1659,4 +1659,41 @@ select {
     }
 
 }
+/* =========================================================
+   MOBILE NAVIGATION FINAL FIX
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .header {
+        z-index: 1000;
+    }
+
+    .header .navigation {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        background: #111111;
+        padding: 10px 5%;
+    }
+
+    .header .navigation.active {
+        display: flex;
+    }
+
+    .header .navigation a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 45px;
+        padding: 10px 0;
+    }
+
+}
 
