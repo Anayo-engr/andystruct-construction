@@ -1175,3 +1175,44 @@ select {
 .contact-card a:hover {
     color: var(--primary-dark);
 }
+/* =====================================================
+   ANDYSTRUCT OFFICIAL COMPANY LOGO
+===================================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 150px;
+    height: auto;
+    max-height: 70px;
+    object-fit: contain;
+}
+
+/* Footer logo */
+
+.footer-logo img {
+    width: 180px;
+    max-height: 85px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 760px) {
+
+    .logo img {
+        width: 125px;
+        max-height: 60px;
+    }
+
+    .footer-logo img {
+        width: 160px;
+    }
+
+}
