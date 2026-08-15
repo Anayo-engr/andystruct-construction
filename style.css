@@ -1698,3 +1698,92 @@ select {
 
 }
 
+/* =========================================================
+   FINAL MOBILE HEADER ORDER
+   LOGO → REQUEST QUOTE → MENU
+========================================================= */
+
+@media screen and (max-width: 760px) {
+
+    .nav-container {
+        display: flex !important;
+        align-items: center !important;
+        width: 92%;
+        gap: 8px;
+    }
+
+    /* 1. LOGO — LEFT */
+    .header .logo {
+        order: 1 !important;
+        width: 120px !important;
+        height: 58px !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+    }
+
+    .header .logo img {
+        width: 120px !important;
+        height: 58px !important;
+        object-fit: contain !important;
+    }
+
+    /* 2. REQUEST A QUOTE — MIDDLE */
+    .header .nav-button {
+        order: 2 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: 4px !important;
+        height: 40px !important;
+        padding: 9px 11px !important;
+        font-size: 9px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* 3. MENU — EXTREME RIGHT */
+    .header .menu-toggle {
+        order: 3 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 42px !important;
+        height: 42px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 420px) {
+
+    .nav-container {
+        gap: 5px;
+    }
+
+    .header .logo {
+        width: 105px !important;
+    }
+
+    .header .logo img {
+        width: 105px !important;
+    }
+
+    .header .nav-button {
+        padding: 8px 9px !important;
+        font-size: 8px !important;
+    }
+
+    .header .menu-toggle {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+}
+
